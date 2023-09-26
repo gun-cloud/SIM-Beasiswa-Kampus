@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JurusanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,5 @@ Route::get('/dashboard', function () {
 Route::get('/mahasiswa', function () {
     return view('admin.mahasiswa');
 });
+
+Route::resource('/jurusan', JurusanController::class);
