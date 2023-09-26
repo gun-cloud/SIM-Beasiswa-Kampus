@@ -7,60 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="images/logo-polmed.png" type="image/png">
     <title>Beasiswa Polmed | Admin</title>
-    @include('partials/styles')
+    @include('partials.styles')
 </head>
 <body>
     <div class="container-scroller">
-        @include('partials/navbar')
+        @include('partials.navbar')
         <div class="container-fluid page-body-wrapper">
-            @include('partials/sidebar')
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="row">
-                        <div class="col-lg-6 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Grafik</h4>
-                                    <canvas id="doughnutChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 grid-margin transparent">
-                            <div class="row">
-                                <div class="col-md-6 mb-4 stretch-card transparent">
-                                    <div class="card card-tale">
-                                        <div class="card-body">
-                                            <p class="mb-4">Data Mahasiswa</p>
-                                            <p class="fs-30 mb-2">4006</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4 stretch-card transparent">
-                                    <div class="card card-dark-blue">
-                                        <div class="card-body">
-                                            <p class="mb-4">Total Beasiswa</p>
-                                            <p class="fs-30 mb-2">61344</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                                    <div class="card card-light-blue">
-                                        <div class="card-body">
-                                            <p class="mb-4">Total Penerima Beasiswa</p>
-                                            <p class="fs-30 mb-2">34040</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            @include('partials.sidebar')
+            <div class="main-panel" styles="margin-top:-100px">
+                @yield('content')
             </div>
         </div>
     </div>
-    @include('partials/scripts')
+    @include('partials.scripts')
 </body>
 
 </html>

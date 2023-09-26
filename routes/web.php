@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts/app');
+Route::get('/dashboard', function () {
+    return view('admin.index');
+});
+Route::get('/mahasiswa', function () {
+    return view('admin.mahasiswa');
 });

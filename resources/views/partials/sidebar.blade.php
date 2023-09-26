@@ -8,6 +8,18 @@
           </li>
           <li class="nav-item">
               <a class="nav-link" href="">
+                  <i class="ti-server menu-icon"></i>
+                  <span class="menu-title">Data Jurusan</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="">
+                  <i class="ti-folder menu-icon"></i>
+                  <span class="menu-title">Data Program Studi</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="">
                   <i class="ti-user menu-icon"></i>
                   <span class="menu-title">Data Mahasiswa</span>
               </a>
