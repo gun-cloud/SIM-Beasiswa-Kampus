@@ -87,8 +87,9 @@ class ProdiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Prodi $prodi)
     {
-        //
+        $prodi->delete();
+        return redirect()->route('prodi.index')->with('success', 'Program Studi Berhasil Di Hapus');
     }
 }
