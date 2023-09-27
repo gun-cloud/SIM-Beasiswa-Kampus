@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
 use App\Models\Prodi;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,7 @@ class ProdiController extends Controller
     {
         return view('admin.prodi', [
             'prodis' => Prodi::all(),
+            'jurusans' => Jurusan::all(),
         ]);
     }
 
@@ -26,7 +28,6 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -37,7 +38,13 @@ class ProdiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'prodi' => 'required',
+            'id_jurusan' => 'required',
+        ]);
+
+        Prodi::create($request->all());
+        return redirect()->route('prodi.index')->with('success', 'Program Studi Berhasil Di Tambah');
     }
 
     /**

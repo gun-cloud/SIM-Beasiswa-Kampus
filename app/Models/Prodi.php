@@ -8,9 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Prodi extends Model
 {
     use HasFactory;
+    public $fillable = ['prodi', 'id_jurusan'];
+    public $timestamp = true;
 
     function jurusan()
     {
-        return $this->belongsTo(Jurusan::class);
+        return $this->belongsTo(Jurusan::class, 'id_jurusan');
     }
 }

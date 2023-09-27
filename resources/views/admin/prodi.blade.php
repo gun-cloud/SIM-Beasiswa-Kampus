@@ -13,7 +13,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah">
                 Tambah
             </button>
-            {{-- @include('admin.prodi-tambah') --}}
+            @include('admin.prodi-tambah')
         </div>
         <div class="table-responsive">
             <table class="table table-hover">
@@ -21,6 +21,7 @@
                     <tr>
                         <th>No</th>
                         <th>Program Studi</th>
+                        <th>Jurusan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -29,6 +30,7 @@
                     <tr>
                         <td>{{$index+1}}</td>
                         <td>{{$prodi->prodi}}</td>
+                        <td>{{$prodi->jurusan->jurusan}}</td>
                         <td>
                             {{-- @include('admin.prodi-ubah') --}}
                             <form action="{{route('prodi.destroy',$prodi->id)}}" method="post">
