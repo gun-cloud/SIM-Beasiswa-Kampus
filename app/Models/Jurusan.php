@@ -10,4 +10,9 @@ class Jurusan extends Model
     use HasFactory;
     public $fillable = ['jurusan'];
     public $timestamps = true;
+
+    public function prodis()
+    {
+        return $this->hasMany(Prodi::class);
+    }
 }

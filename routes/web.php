@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,4 @@ Route::get('/mahasiswa', function () {
 });
 
 Route::resource('/jurusan', JurusanController::class);
+Route::resource('/prodi', ProdiController::class);
