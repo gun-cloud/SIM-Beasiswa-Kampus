@@ -77,7 +77,14 @@ class JurusanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'jurusan' => 'required',
+        ]);
+
+        $jurusan = Jurusan::find($id);
+        $jurusan->update($request->all());
+
+        return redirect()->route('jurusan.index')->with('success', 'Jurusan Berhasil Di Ubah');
     }
 
     /**
