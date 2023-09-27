@@ -32,7 +32,7 @@
                         <td>{{$prodi->prodi}}</td>
                         <td>{{$prodi->jurusan->jurusan}}</td>
                         <td>
-                            {{-- @include('admin.prodi-ubah') --}}
+                            @include('admin.prodi-ubah')
                             <form action="{{route('prodi.destroy',$prodi->id)}}" method="post">
                                 <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah{{$prodi->id}}">
                                     Ubah

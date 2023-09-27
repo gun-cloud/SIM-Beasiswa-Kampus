@@ -78,7 +78,14 @@ class ProdiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'prodi' => 'required',
+            'id_jurusan' => 'required',
+        ]);
+
+        $prodi = Prodi::find($id);
+        $prodi->update($request->all());
+        return redirect()->route('prodi.index')->with('success', 'Program Studi Berhasil Di Ubah');
     }
 
     /**
