@@ -30,12 +30,16 @@
                         <td>{{$index+1}}</td>
                         <td>{{$jurusan->jurusan}}</td>
                         <td>
-                            <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah">
-                                Ubah
-                            </button>
-                            <button type="button" class="badge badge-danger" data-toggle="modal" data-target="#hapus">
-                                Hapus
-                            </button>
+                            <form action="{{route('jurusan.destroy',$jurusan->id)}}" method="post">
+                                <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah">
+                                    Ubah
+                                </button>
+                                @csrf
+                                @method('DELETE')   
+                                <button type="submit" class="badge badge-danger" data-toggle="modal" data-target="#hapus">
+                                    Hapus
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @empty

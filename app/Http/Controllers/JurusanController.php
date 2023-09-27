@@ -42,7 +42,6 @@ class JurusanController extends Controller
         $request->validate([
             'jurusan' => 'required',
         ]);
-        // dd($request);
         Jurusan::create($request->all());
         return redirect()->route('jurusan.index')->with('success', 'Jurusan Berhasil Di Tambah');
     }
@@ -87,8 +86,9 @@ class JurusanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Jurusan $jurusan)
     {
-        //
+        $jurusan->delete();
+        return redirect()->route('jurusan.index')->with('success', 'Jurusan Berhasil Di Hapus');
     }
 }

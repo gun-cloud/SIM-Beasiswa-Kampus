@@ -7,6 +7,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Error!</strong> <br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <div class="modal-body">
                 <form action="{{route('jurusan.store')}}" method="post">
                     @csrf
