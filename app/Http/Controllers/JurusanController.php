@@ -28,7 +28,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        //
+        // 
     }
 
     /**
@@ -39,7 +39,12 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'jurusan' => 'required',
+        ]);
+        // dd($request);
+        Jurusan::create($request->all());
+        return redirect()->route('jurusan.index')->with('success', 'Jurusan Berhasil Di Tambah');
     }
 
     /**

@@ -8,15 +8,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" method="post">
+                <form action="{{route('jurusan.store')}}" method="post">
+                    @csrf
                     <div class="form-group">
                         <label for="jurusan">Nama Jurusan</label>
-                        <input type="text" class="form-control" id="jurusan">
+                        <input type="text" class="form-control" id="jurusan" name="jurusan">
                     </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </div>
             </form>
         </div>

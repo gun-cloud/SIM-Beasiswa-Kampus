@@ -8,7 +8,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" method="post">
+                <form action="" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label for="nim">NIM</label>
                         <input type="text" class="form-control" id="nim">
@@ -29,12 +30,13 @@
                         <label for="semester">Semester</label>
                         <input type="text" class="form-control" id="semester">
                     </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Simpan">
+                    </div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-            </form>
         </div>
     </div>
 </div>

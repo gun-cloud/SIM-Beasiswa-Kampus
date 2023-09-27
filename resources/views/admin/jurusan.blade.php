@@ -3,6 +3,11 @@
 @section('content')
 <div class="content-wrapper">
     <div class="card">
+        @if($message=Session::get('success'))
+        <div class="alert alert-success">
+            {{$message}}
+        </div>
+        @endif
         <div class="card-body d-flex justify-content-between align-items-center">
             <h4 class="card-title">Data Jurusan</h4>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah">
