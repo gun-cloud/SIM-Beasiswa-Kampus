@@ -56,17 +56,23 @@
                             @endif
                         </td>
                         <td>
-                            <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah">
-                                Ubah
-                            </button>
-                            <button type="button" class="badge badge-danger" data-toggle="modal" data-target="#hapus">
-                                Hapus
-                            </button>
+                            @include('admin.mahasiswa-ubah')
+                            <form action="{{route('mahasiswa.destroy',$mahasiswa->id)}}" method="post">
+                                <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah{{$mahasiswa->id}}">
+                                    Ubah
+                                </button>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="badge badge-danger">
+                                    Hapus
+                                </button>
+                            </form>
+                        </td>
                         </td>
                     </tr>
                     @empty
                     <tr>
-                        <td class="text-center"><i>Data Kosong</i></td>
+                        <td colspan="8" class="text-center"><i>Data Kosong</i></td>
                     </tr>
                     @endforelse
                 </tbody>
