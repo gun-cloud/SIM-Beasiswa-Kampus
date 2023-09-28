@@ -25,14 +25,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @forelse($mahasiswas as $index => $mahasiswa)
                     <tr>
-                        <td>1</td>
-                        <td>Hendri Gunawan</td>
-                        <td>2105112011</td>
-                        <td>Teknik Komputer dan Informatika</td>
-                        <td>D3 Teknik Komputer</td>
-                        <td>5</td>
-                        <td><label class="badge badge-success">Beasiswa</label></td>
+                        <td>{{$index+1}}</td>
+                        <td>{{$mahasiswa->nama}}</td>
+                        <td>{{$mahasiswa->nim}}</td>
+                        <td>{{$mahasiswa->prodi->jurusan->jurusan}}</td>
+                        <td>{{$mahasiswa->prodi->prodi}}</td>
+                        <td>{{$mahasiswa->semester}}</td>
+                        <td>
+                            @if($mahasiswa->status == 1)
+                            <label class="badge badge-success">Beasiswa</label>
+                            @else
+                            <label class="badge badge-danger">Tidak Beasiswa</label>
+                            @endif
+                        </td>
                         <td>
                             <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah">
                                 Ubah
@@ -42,23 +49,11 @@
                             </button>
                         </td>
                     </tr>
+                    @empty
                     <tr>
-                        <td>2</td>
-                        <td>Ike Fadillah</td>
-                        <td>2105112009</td>
-                        <td>Teknik Komputer dan Informatika</td>
-                        <td>D3 Teknik Komputer</td>
-                        <td>5</td>
-                        <td><label class="badge badge-danger">Tidak Beasiswa</label></td>
-                        <td>
-                            <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah">
-                                Ubah
-                            </button>
-                            <button type="button" class="badge badge-danger" data-toggle="modal" data-target="#hapus">
-                                Hapus
-                            </button>
-                        </td>
+                        <td class="text-center"><i>Data Kosong</i></td>
                     </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
