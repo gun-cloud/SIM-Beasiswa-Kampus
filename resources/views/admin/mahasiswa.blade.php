@@ -3,6 +3,21 @@
 @section('content')
 <div class="content-wrapper">
     <div class="card">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Error!</strong> <br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        @if($message=Session::get('success'))
+        <div class="alert alert-success">
+            {{$message}}
+        </div>
+        @endif
         <div class="card-body d-flex justify-content-between align-items-center">
             <h4 class="card-title">Data Mahasiswa</h4>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah">

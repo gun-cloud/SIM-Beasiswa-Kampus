@@ -8,28 +8,28 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
+                <form action="{{route('mahasiswa.store')}}" method="post">
                     @csrf
                     <div class="form-group">
                         <label for="nim">NIM</label>
-                        <input type="text" class="form-control" id="nim">
+                        <input type="text" class="form-control" id="nim" name="nim" value="{{old('nim')}}">
                     </div>
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama">
-                    </div>
-                    <div class="form-group">
-                        <label for="jurusan">Jurusan</label>
-                        <input type="text" class="form-control" id="jurusan">
+                        <input type="text" class="form-control" id="nama" name="nama" value="{{old('nama')}}">
                     </div>
                     <div class="form-group">
                         <label for="prodi">Program Studi</label>
-                        <input type="text" class="form-control" id="prodi">
+                        <select class="form-control" id="prodi" name="id_prodi">
+                            @foreach($prodis as $prodi)
+                            <option hidden selected value="">--Pilih Program Studi--</option>
+                            <option value="{{$prodi->id}}" {{ old('id_prodi') == $prodi->id ? 'selected' : '' }}>{{$prodi->prodi}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="semester">Semester</label>
-                        <input type="text" class="form-control" id="semester">
-                    </div>
+                        <input type="text" class="form-control" id="semester
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Mahasiswa extends Model
 {
     use HasFactory;
-    protected $guarded = ['id'];
+    // protected $guarded = ['id'];
+    public $fillable = ['nim', 'nama', 'semester', 'id_prodi', 'status'];
     public $timestamp = true;
 
     function prodi()

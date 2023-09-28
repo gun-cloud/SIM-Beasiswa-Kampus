@@ -39,7 +39,14 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nim' => 'required|numeric|min:10|unique:mahasiswas,nim',
+            'nama' => 'required',
+            'semester' => 'required',
+            'id_prodi' => 'required'
+        ]);
+        Mahasiswa::create($request->all());
+        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Di Tambah');
     }
 
     /**
