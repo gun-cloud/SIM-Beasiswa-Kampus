@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="content-wrapper">
+    hello guys
     <div class="card">
         @if($message=Session::get('success'))
         <div class="alert alert-success">
