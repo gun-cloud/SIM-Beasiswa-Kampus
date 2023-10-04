@@ -80,7 +80,16 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nim' => 'required|numeric|min:10',
+            'nama' => 'required',
+            'semester' => 'required',
+            'id_prodi' => 'required'
+        ]);
+        // dd($request->all());
+        $mahasiswa = Mahasiswa::find($id);
+        $mahasiswa->update($request->all());
+        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Di Ubah');
     }
 
     /**
