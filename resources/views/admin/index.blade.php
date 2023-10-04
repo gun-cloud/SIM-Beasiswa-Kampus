@@ -17,7 +17,7 @@
                     <div class="card card-tale">
                         <div class="card-body">
                             <p class="mb-4">Data Mahasiswa</p>
-                            <p class="fs-30 mb-2">4006</p>
+                            <p class="fs-30 mb-2">12</p>
                         </div>
                     </div>
                 </div>
