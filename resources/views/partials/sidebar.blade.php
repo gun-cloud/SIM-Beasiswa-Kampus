@@ -2,7 +2,7 @@
       <ul class="nav">
           <li class="nav-item">
               <a class="nav-link" href="index.html">
-                  <i class="ti-home menu-icon"></i>
+                  <i class="tgi-home menu-icon"></i>
                   <span class="menu-title">Dashboard</span>
               </a>
           </li>

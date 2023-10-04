@@ -29,8 +29,8 @@
                     </div>
                     <div class="form-group">
                         <label for="semester">Semester</label>
-                        <input type="text" class="form-control" id="semester
-
+                        <input type="text" class="form-control" id="semester" name="semester">
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <input type="submit" class="btn btn-primary" value="Simpan">
