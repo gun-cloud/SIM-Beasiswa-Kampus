@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_prodi');
             $table->integer('nim');
             $table->string('nama');
+            $table->string('password')->default('123456');
             $table->integer('semester');
             $table->boolean('status')->default(false);
             $table->timestamps();
