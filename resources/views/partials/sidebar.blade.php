@@ -1,25 +1,25 @@
   <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
           <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                  <i class="tgi-home menu-icon"></i>
+              <a class="nav-link" href="/dashboard">
+                  <i class="ti-home menu-icon"></i>
                   <span class="menu-title">Dashboard</span>
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="resources/views/admin/jurusan.blade.php">
+              <a class="nav-link" href="{{route('jurusan.index')}}">
                   <i class="ti-server menu-icon"></i>
                   <span class="menu-title">Data Jurusan</span>
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="resources/views/admin/prodi.blade.php">
+              <a class="nav-link" href="{{route('prodi.index')}}">
                   <i class="ti-folder menu-icon"></i>
                   <span class="menu-title">Data Program Studi</span>
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="resources/views/admin/mahasiswa.blade.php">
+              <a class="nav-link" href="{{route('mahasiswa.index')}}">
                   <i class="ti-user menu-icon"></i>
                   <span class="menu-title">Data Mahasiswa</span>
               </a>
