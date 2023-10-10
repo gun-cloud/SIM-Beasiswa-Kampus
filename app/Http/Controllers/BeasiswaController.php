@@ -45,7 +45,7 @@ class BeasiswaController extends Controller
         ]);
 
         Beasiswa::create($request->all());
-        return redirect()->route('jurusan.index')->with('success', 'Beasiswa Berhasil Di Tambah');
+        return redirect()->route('beasiswa.index')->with('success', 'Beasiswa Berhasil Di Tambah');
     }
 
     /**
