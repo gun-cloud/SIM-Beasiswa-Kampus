@@ -14,7 +14,7 @@ class BeasiswaController extends Controller
      */
     public function index()
     {
-        return view('admin.beasiswa',[
+        return view('admin.beasiswa', [
             'title' => 'Beasiswa',
             'beasiswas' => Beasiswa::all(),
         ]);
@@ -38,7 +38,14 @@ class BeasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'jenis' => 'required',
+            'sumber' => 'required',
+        ]);
+
+        Beasiswa::create($request->all());
+        return redirect()->route('jurusan.index')->with('success', 'Beasiswa Berhasil Di Tambah');
     }
 
     /**
