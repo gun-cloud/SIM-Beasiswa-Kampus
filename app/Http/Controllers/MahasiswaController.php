@@ -16,6 +16,7 @@ class MahasiswaController extends Controller
     public function index()
     {
         return view('admin.mahasiswa', [
+            'title' => 'Mahasiswa',
             'mahasiswas' => Mahasiswa::all(),
             'prodis' => Prodi::all(),
         ]);

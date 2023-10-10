@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('password')->default('123456');
             $table->integer('semester');
-            $table->boolean('status')->default(false);
+            $table->string('beasiswa')->default('');
             $table->timestamps();
 
             $table->foreign('id_prodi')->references('id')->on('prodis')->onDelete('cascade');

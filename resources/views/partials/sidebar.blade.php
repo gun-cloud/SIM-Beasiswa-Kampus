@@ -25,7 +25,7 @@
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="{{route('beasiswa.index')}}">
                   <i class="ti-wallet menu-icon"></i>
                   <span class="menu-title">Data Beasiswa</span>
               </a>

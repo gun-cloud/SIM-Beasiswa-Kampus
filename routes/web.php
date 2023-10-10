@@ -3,6 +3,8 @@
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\BeasiswaController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,11 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/dashboard', function () {
+    return view('admin.index', [
+        'title' => 'Dashboard'
+    ]);
 });
+
 
 
 Route::resource('/jurusan', JurusanController::class);
 Route::resource('/prodi', ProdiController::class);
 Route::resource('/mahasiswa', MahasiswaController::class);
+Route::resource('/beasiswa', BeasiswaController::class);

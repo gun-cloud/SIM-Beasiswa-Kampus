@@ -16,6 +16,7 @@ class ProdiController extends Controller
     public function index()
     {
         return view('admin.prodi', [
+            'title' => 'Prodi',
             'prodis' => Prodi::all(),
             'jurusans' => Jurusan::all(),
         ]);
