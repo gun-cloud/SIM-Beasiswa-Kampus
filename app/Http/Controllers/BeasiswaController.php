@@ -88,8 +88,9 @@ class BeasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Beasiswa $beasiswa)
     {
-        //
+        $beasiswa->delete();
+        return redirect()->route('beasiswa.index')->with('success', 'Beasiswa Berhasil Di Hapus');
     }
 }
