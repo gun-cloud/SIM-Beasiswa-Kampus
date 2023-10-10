@@ -23,7 +23,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah">
                 Tambah
             </button>
-            {{-- @include('admin.jurusan-tambah') --}}
+            @include('admin.beasiswa-tambah')
         </div>
         <div class="table-responsive">
             <table class="table table-hover">
