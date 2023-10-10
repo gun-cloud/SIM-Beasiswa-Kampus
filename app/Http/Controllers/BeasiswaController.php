@@ -79,7 +79,14 @@ class BeasiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'jenis' => 'required',
+            'sumber' => 'required',
+        ]);
+        $beasiswa = Beasiswa::find($id);
+        $beasiswa->update($request->all());
+        return redirect()->route('beasiswa.index')->with('success', 'Beasiswa Berhasil Di Ubah');
     }
 
     /**

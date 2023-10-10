@@ -43,7 +43,7 @@
                         <td>{{$beasiswa->jenis}}</td>
                         <td>{{$beasiswa->sumber}}</td>
                         <td>
-                            {{-- @include('admin.jurusan-ubah') --}}
+                            @include('admin.beasiswa-ubah')
                             <form action="{{route('beasiswa.destroy',$beasiswa->id)}}" method="post">
                                 <button type="button" class="badge badge-warning" data-toggle="modal" data-target="#ubah{{$beasiswa->id}}">
                                     Ubah
