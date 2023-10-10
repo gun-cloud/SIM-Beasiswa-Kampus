@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Beasiswa;
 use Illuminate\Http\Request;
 
 class BeasiswaController extends Controller
@@ -13,7 +14,10 @@ class BeasiswaController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.beasiswa',[
+            'title' => 'Beasiswa',
+            'beasiswas' => Beasiswa::all(),
+        ]);
     }
 
     /**
