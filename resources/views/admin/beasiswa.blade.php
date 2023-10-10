@@ -30,8 +30,9 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Jurusan</th>
-                        <th>Aksi</th>
+                        <th>Jenis Beasiswa</th>
+                        <th>Beasiswa</th>
+                        <th>Sumber Dana</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +40,8 @@
                     <tr>
                         <td>{{$index+1}}</td>
                         <td>{{$beasiswa->nama}}</td>
+                        <td>{{$beasiswa->jenis}}</td>
+                        <td>{{$beasiswa->sumber}}</td>
                         <td>
                             {{-- @include('admin.jurusan-ubah') --}}
                             <form action="{{route('jurusan.destroy',$beasiswa->id)}}" method="post">
