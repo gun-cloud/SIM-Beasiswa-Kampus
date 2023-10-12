@@ -16,14 +16,16 @@ return new class extends Migration
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_prodi');
+            $table->unsignedBigInteger('id_beasiswa')->default(null)->nullable();
             $table->integer('nim');
             $table->string('nama');
             $table->string('password')->default('123456');
             $table->integer('semester');
-            $table->string('beasiswa')->default('');
             $table->timestamps();
 
+
             $table->foreign('id_prodi')->references('id')->on('prodis')->onDelete('cascade');
+            $table->foreign('id_beasiswa')->references('id')->on('beasiswas')->onDelete('cascade');
         });
     }
 

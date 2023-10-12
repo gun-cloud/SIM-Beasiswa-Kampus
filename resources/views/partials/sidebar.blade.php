@@ -19,15 +19,15 @@
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="{{route('mahasiswa.index')}}">
-                  <i class="ti-user menu-icon"></i>
-                  <span class="menu-title">Data Mahasiswa</span>
-              </a>
-          </li>
-          <li class="nav-item">
               <a class="nav-link" href="{{route('beasiswa.index')}}">
                   <i class="ti-wallet menu-icon"></i>
                   <span class="menu-title">Data Beasiswa</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{route('mahasiswa.index')}}">
+                  <i class="ti-user menu-icon"></i>
+                  <span class="menu-title">Data Mahasiswa</span>
               </a>
           </li>
           <li class="nav-item">
