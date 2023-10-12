@@ -58,7 +58,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="3" class="text-center"><i>Data Kosong</i></td>
+                        <td colspan="4" class="text-center"><i>Data Kosong</i></td>
                     </tr>
                     @endforelse
                 </tbody>
