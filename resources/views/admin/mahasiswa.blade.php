@@ -49,10 +49,10 @@
                         <td>{{$mahasiswa->prodi->prodi}}</td>
                         <td>{{$mahasiswa->semester}}</td>
                         <td>
-                            @if($mahasiswa->status == 1)
-                            <label class="badge badge-success">Beasiswa</label>
-                            @else
+                            @if($mahasiswa->id_beasiswa != null)
                             <label class="badge badge-danger">Tidak Beasiswa</label>
+                            @else
+                            <label class="badge badge-success">Beasiswa</label>
                             @endif
                         </td>
                         <td>
