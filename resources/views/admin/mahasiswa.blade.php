@@ -23,8 +23,18 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah">
                 Tambah
             </button>
-            @include('admin.mahasiswa-tambah')
         </div>
+        <div class="d-flex justify-content-between align-items-center ml-3 mr-3">
+            <input type="text" class="form-control" placeholder="Cari...">
+            <div class="form-group ml-2 mt-4">
+                <select id="filter" class="form-control">
+                    <option value="all">Semua</option>
+                    <option value="beasiswa">Beasiswa</option>
+                    <option value="tidak_beasiswa">Tidak Beasiswa</option>
+                </select>
+            </div>
+        </div>
+        @include('admin.mahasiswa-tambah')
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
@@ -49,7 +59,7 @@
                         <td>{{$mahasiswa->prodi->prodi}}</td>
                         <td>{{$mahasiswa->semester}}</td>
                         <td>
-                            @if($mahasiswa->id_beasiswa != null)
+                            @if($mahasiswa->id_beasiswa == null)
                             <label class="badge badge-danger">Tidak Beasiswa</label>
                             @else
                             <label class="badge badge-success">Beasiswa</label>
