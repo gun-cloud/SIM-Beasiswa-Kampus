@@ -32,12 +32,6 @@
           </li>
           <li class="nav-item">
               <a class="nav-link" href="">
-                  <i class="ti-receipt menu-icon"></i>
-                  <span class="menu-title">Penerima Beasiswa</span>
-              </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="">
                   <i class="ti-printer menu-icon"></i>
                   <span class="menu-title">Laporan</span>
               </a>
