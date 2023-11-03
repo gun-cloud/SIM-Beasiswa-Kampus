@@ -5,6 +5,7 @@ use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\BeasiswaController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,14 +19,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('admin.index', [
-        'title' => 'Dashboard'
-    ]);
-});
 
-
-
+Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::resource('/jurusan', JurusanController::class);
 Route::resource('/prodi', ProdiController::class);
 Route::resource('/mahasiswa', MahasiswaController::class);
