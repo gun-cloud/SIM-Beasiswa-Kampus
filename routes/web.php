@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/',[HomeController::class, 'index']);
+
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::resource('/jurusan', JurusanController::class);
 Route::resource('/prodi', ProdiController::class);
