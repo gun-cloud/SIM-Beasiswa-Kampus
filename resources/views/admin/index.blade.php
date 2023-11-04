@@ -17,7 +17,7 @@
                     <div class="card card-tale">
                         <div class="card-body">
                             <p class="mb-4">Data Mahasiswa</p>
-                            <p class="fs-30 mb-2">12</p>
+                            <p class="fs-30 mb-2">{{$totalMahasiswa}}</p>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                     <div class="card card-dark-blue">
                         <div class="card-body">
                             <p class="mb-4">Total Beasiswa</p>
-                            <p class="fs-30 mb-2">61344</p>
+                            <p class="fs-30 mb-2">{{$totalBeasiswa}}</p>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="card card-light-blue">
                         <div class="card-body">
                             <p class="mb-4">Total Penerima Beasiswa</p>
-                            <p class="fs-30 mb-2">34040</p>
+                            <p class="fs-30 mb-2">{{$totalPenerima}}</p>
                         </div>
                     </div>
                 </div>
