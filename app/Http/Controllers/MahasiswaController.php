@@ -13,11 +13,17 @@ class MahasiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->has('search')) {
+            $mahasiswas = Mahasiswa::search($request->search)->get();
+        } else {
+            $mahasiswas = Mahasiswa::all();
+        }
+
         return view('admin.mahasiswa', [
             'title' => 'Mahasiswa',
-            'mahasiswas' => Mahasiswa::all(),
+            'mahasiswas' => $mahasiswas,
             'prodis' => Prodi::all(),
         ]);
     }

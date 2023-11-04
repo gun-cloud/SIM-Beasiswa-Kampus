@@ -25,7 +25,16 @@
             </button>
         </div>
         <div class="d-flex justify-content-between align-items-center ml-3 mr-3">
-            <input type="text" class="form-control" placeholder="Cari...">
+            <form method="GET">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Cari..." name="search" value="{{ request('search') }}">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary"><i class="ti-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
             <div class="form-group ml-2 mt-4">
                 <select id="filter" class="form-control">
                     <option value="all">Semua</option>
