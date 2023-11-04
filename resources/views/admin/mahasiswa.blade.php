@@ -35,13 +35,13 @@
                     </div>
                 </div>
             </form>
-            <div class="form-group ml-2 mt-4">
-                <select id="filter" class="form-control">
-                    <option value="all">Semua</option>
-                    <option value="beasiswa">Beasiswa</option>
-                    <option value="tidak_beasiswa">Tidak Beasiswa</option>
+            <form action="{{ route('mahasiswa.index') }}" method="get">
+                <select name="status_beasiswa" id="status_beasiswa" class="form-control">
+                    <option value="all" {{ request('status_beasiswa') == 'all' ? 'selected' : '' }}>Semua</option>
+                    <option value="beasiswa" {{ request('status_beasiswa') == 'beasiswa' ? 'selected' : '' }}>Beasiswa</option>
+                    <option value="tidak_beasiswa" {{ request('status_beasiswa') == 'tidak_beasiswa' ? 'selected' : '' }}>Tidak Beasiswa</option>
                 </select>
-            </div>
+            </form>
         </div>
         @include('admin.mahasiswa-tambah')
         <div class="table-responsive">
@@ -99,4 +99,20 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#status_beasiswa").change(function() {
+            var selectedValue = $(this).val();
+            if (selectedValue !== "all") {
+                window.location.href = "{{ route('mahasiswa.index') }}?status_beasiswa=" + selectedValue;
+            } else {
+                window.location.href = "{{ route('mahasiswa.index') }}";
+            }
+        });
+    });
+
+</script>
+
 @endsection

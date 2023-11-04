@@ -16,10 +16,27 @@ class MahasiswaController extends Controller
     public function index(Request $request)
     {
         if ($request->has('search')) {
-            $mahasiswas = Mahasiswa::search($request->search)->get();
+            $mahasiswas = Mahasiswa::search($request->search);
         } else {
-            $mahasiswas = Mahasiswa::all();
+            $mahasiswas = Mahasiswa::query();
         }
+
+        $statusBeasiswa = $request->input('status_beasiswa');
+
+        if ($statusBeasiswa === 'beasiswa') {
+            $mahasiswas->whereNotNull('id_beasiswa');
+        } elseif ($statusBeasiswa === 'tidak_beasiswa') {
+            $mahasiswas->whereNull('id_beasiswa');
+        }
+
+        $mahasiswas = $mahasiswas->get();
+
+        return view('admin.mahasiswa', [
+            'title' => 'Mahasiswa',
+            'mahasiswas' => $mahasiswas,
+            'prodis' => Prodi::all(),
+        ]);
+
 
         return view('admin.mahasiswa', [
             'title' => 'Mahasiswa',
