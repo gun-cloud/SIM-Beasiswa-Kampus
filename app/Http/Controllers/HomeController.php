@@ -10,4 +10,8 @@ class HomeController extends Controller
     {
         return view('users.index');
     }
+    public function login()
+    {
+        return view('login');
+    }
 }

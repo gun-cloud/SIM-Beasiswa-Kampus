@@ -18,10 +18,10 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1>Bettter digital experience with Ninestars</h1>
-                    <h2>We are team of talented designers making websites with Bootstrap</h2>
+                    <h1>Selamat Datang di Sistem Informasi Beasiswa POLMED</h1>
+                    <h2>Ayo, Segera daftarkan dirimu dan raih cita-citamu tanpa terhalang biaya.</h2>
                     <div>
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                        <a href="#about" class="btn-get-started scrollto">Lihat Beasiswa</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img">
@@ -40,7 +40,7 @@
 
                 <div class="row justify-content-between">
                     <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
-                        <img src="assets/img/about-img.svg" class="img-fluid" alt="" data-aos="zoom-in">
+                        <img src="images/ilustrator2.png" class="img-fluid" alt="" width="200" style="margin-top:-50px;">
                     </div>
                     <div class="col-lg-6 pt-5 pt-lg-0">
                         <h3 data-aos="fade-up">Voluptatem dignissimos provident quasi</h3>

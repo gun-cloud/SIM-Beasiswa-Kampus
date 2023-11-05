@@ -2,7 +2,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <div class="logo">
-            <h1 class="text-light"><a href="index.html"><span>Ninestars</span></a></h1>
+            <h1 class="text-light"><a href="index.html"><span>POLMED</span></a></h1>
         </div>
 
         <nav id="navbar" class="navbar">
@@ -30,7 +30,7 @@
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+                <li><a class="getstarted scrollto" href="{{route('login')}}">Login</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

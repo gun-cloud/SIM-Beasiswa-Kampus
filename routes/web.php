@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/login', [HomeController::class, 'login'])->name('login');
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::resource('/jurusan', JurusanController::class);
