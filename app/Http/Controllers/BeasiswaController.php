@@ -39,12 +39,26 @@ class BeasiswaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
-            'jenis' => 'required',
-            'sumber' => 'required',
+            'nama'       => 'required',
+            'jenis'      => 'required',
+            'sumber'     => 'required',
+            'deskripsi'  => 'required',
+            'gambar'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        Beasiswa::create($request->all());
+        $imageName = time() . '.' . $request->gambar->extension();
+        $request->gambar->move(public_path('images'), $imageName);
+        $imagePath = 'images/' . $imageName;
+
+        Beasiswa::create([
+            'gambar'     => $imagePath,
+            'nama'     => $request->nama,
+            'jenis'   => $request->jenis,
+            'sumber'   => $request->sumber,
+            'deskripsi'   => $request->deskripsi,
+        ]);
+
+
         return redirect()->route('beasiswa.index')->with('success', 'Beasiswa Berhasil Di Tambah');
     }
 
@@ -52,7 +66,7 @@ class BeasiswaController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response    
      */
     public function show($id)
     {

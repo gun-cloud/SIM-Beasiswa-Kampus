@@ -33,6 +33,8 @@
                         <th>Jenis Beasiswa</th>
                         <th>Beasiswa</th>
                         <th>Sumber Dana</th>
+                        <th>Deskripsi</th>
+                        <th>Gambar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +44,9 @@
                         <td>{{$beasiswa->nama}}</td>
                         <td>{{$beasiswa->jenis}}</td>
                         <td>{{$beasiswa->sumber}}</td>
+                        <td>{{implode(' ', array_slice(str_word_count(strip_tags($beasiswa->deskripsi), 1), 0, 10))}}</td>
+
+                        <td>{{$beasiswa->gambar}}</td>
                         <td>
                             @include('admin.beasiswa-ubah')
                             <form action="{{route('beasiswa.destroy',$beasiswa->id)}}" method="post">
@@ -58,7 +63,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="4" class="text-center"><i>Data Kosong</i></td>
+                        <td colspan="6" class="text-center"><i>Data Kosong</i></td>
                     </tr>
                     @endforelse
                 </tbody>
