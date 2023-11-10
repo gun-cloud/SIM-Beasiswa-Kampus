@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <label for="deskripsi">Deskripsi</label>
-                        <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" class="form-control"></textarea>
+                        <textarea class="ckeditor-textarea" name="deskripsi" id="deskripsi" cols="30" rows="10" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="gambar">Gambar</label>
@@ -39,4 +39,3 @@
         </div>
     </div>
 </div>
-

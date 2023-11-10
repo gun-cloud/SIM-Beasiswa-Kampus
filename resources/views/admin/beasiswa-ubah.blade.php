@@ -8,26 +8,26 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{route('beasiswa.store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('beasiswa.update', $beasiswa->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
+                    @method('put')
                     <div class="form-group">
                         <label for="nama">Nama Beasiswa</label>
-                        <input type="text" class="form-control" id="nama" name="nama">
+                        <input type="text" class="form-control" id="nama" name="nama" value="{{$beasiswa->nama}}">
                     </div>
                     <div class="form-group">
                         <label for="jenis">Jenis Beasiswa</label>
-                        <input type="text" class="form-control" id="jenis" name="jenis">
+                        <input type="text" class="form-control" id="jenis" name="jenis" value="{{$beasiswa->jenis}}">
                     </div>
                     <div class="form-group">
                         <label for="sumber">Sumber Dana Beasiswa</label>
-                        <input type="text" class="form-control" id="sumber" name="sumber">
+                        <input type="text" class="form-control" id="sumber" name="sumber" value="{{$beasiswa->sumber}}">
                     </div>
                     <div class="form-group">
                         <label for="deskripsi">Deskripsi</label>
-                        <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" class="form-control"></textarea>
+                        <textarea class="ckeditor-textarea" name="deskripsi" id="deskripsi" cols="30" rows="10" class="form-control">{{$beasiswa->deskripsi}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="gambar">Gambar</label>
                         <input type="file" class="form-control" id="gambar" name="gambar">
                     </div>
             </div>
@@ -39,4 +39,3 @@
         </div>
     </div>
 </div>
-

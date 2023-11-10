@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Beasiswa;
 use Illuminate\Http\Request;
+use Spatie\Backtrace\File;
 
 class BeasiswaController extends Controller
 {
@@ -94,14 +95,44 @@ class BeasiswaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required',
-            'jenis' => 'required',
-            'sumber' => 'required',
+            'nama'       => 'required',
+            'jenis'      => 'required',
+            'sumber'     => 'required',
+            'deskripsi'  => 'required',
+            'gambar'     => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
-        $beasiswa = Beasiswa::find($id);
-        $beasiswa->update($request->all());
-        return redirect()->route('beasiswa.index')->with('success', 'Beasiswa Berhasil Di Ubah');
+
+        $beasiswa = Beasiswa::findOrFail($id);
+
+        if ($request->hasFile('gambar')) {
+            $oldImagePath = public_path($beasiswa->gambar);
+            if (file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
+
+            $imageName = time() . '.' . $request->gambar->extension();
+            $request->gambar->move(public_path('images'), $imageName);
+            $imagePath = 'images/' . $imageName;
+
+            $beasiswa->update([
+                'gambar'     => $imagePath,
+                'nama'       => $request->nama,
+                'jenis'      => $request->jenis,
+                'sumber'     => $request->sumber,
+                'deskripsi'  => $request->deskripsi,
+            ]);
+        } else {
+            $beasiswa->update([
+                'nama'       => $request->nama,
+                'jenis'      => $request->jenis,
+                'sumber'     => $request->sumber,
+                'deskripsi'  => $request->deskripsi,
+            ]);
+        }
+
+        return redirect()->route('beasiswa.index')->with('success', 'Beasiswa Berhasil Di Perbarui');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -111,6 +142,10 @@ class BeasiswaController extends Controller
      */
     public function destroy(Beasiswa $beasiswa)
     {
+        $oldImagePath = public_path($beasiswa->gambar);
+        if (file_exists($oldImagePath)) {
+            unlink($oldImagePath);
+        }
         $beasiswa->delete();
         return redirect()->route('beasiswa.index')->with('success', 'Beasiswa Berhasil Di Hapus');
     }
