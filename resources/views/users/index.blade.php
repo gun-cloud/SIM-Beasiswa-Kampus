@@ -79,7 +79,7 @@
                     @forelse($beasiswas as $beasiswa)
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <img src="{{$beasiswa->gambar}}" width="175" class="mb-3">
                             <h4 class="title"><a href="">{{$beasiswa->nama}}</a></h4>
                             <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
                         </div>
