@@ -77,11 +77,11 @@
 
                 <div class="row justify-content-center">
                     @forelse($beasiswas as $beasiswa)
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box">
                             <img src="{{$beasiswa->gambar}}" width="175" class="mb-3">
                             <h4 class="title"><a href="">{{$beasiswa->nama}}</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
+                            <p class="description" style="text-align: justify;">{{implode(' ', array_slice(str_word_count(strip_tags($beasiswa->deskripsi), 1), 0, 30))}}...</p>
                         </div>
                     </div>
                     @empty
