@@ -105,7 +105,7 @@
                             Kota Medan, Sumatera Utara 20155<br>
                             Indonesia <br><br>
                             <strong>Phone:</strong> (061) 8210436<br>
-                            <strong>Email:</strong> polmed.ac.id <br>
+                            <strong>Email:</strong> info@polmed.ac.id <br>
                         </p>
                     </div>
 
@@ -114,32 +114,18 @@
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Beasiswa</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Social Networks</h4>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                        <p>Kunjungi Sosial Media Kami</p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="https://instagram.com/official.polmed?igshid=NnB3MGcwZ2dqejky" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCJ_DhtZamOf8h1aeBXVZW4g" class="youtube"><i class="bi bi-youtube"></i></a>
+                            <a href="https://web.facebook.com/Polmed.official" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://twitter.com/polmedhumas" class="twitter"><i class="bi bi-twitter"></i></a>
                         </div>
                     </div>
 
@@ -147,14 +133,11 @@
             </div>
         </div>
 
-    </footer><!-- End Footer -->
+    </footer>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
 </body>
