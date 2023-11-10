@@ -46,7 +46,7 @@
                         <td>{{$beasiswa->sumber}}</td>
                         <td>{{implode(' ', array_slice(str_word_count(strip_tags($beasiswa->deskripsi), 1), 0, 10))}}</td>
 
-                        <td>{{$beasiswa->gambar}}</td>
+                        <td><img src="{{$beasiswa->gambar}}"></td>
                         <td>
                             @include('admin.beasiswa-ubah')
                             <form action="{{route('beasiswa.destroy',$beasiswa->id)}}" method="post">
@@ -71,4 +71,11 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('deskripsi');
+
+</script>
+
 @endsection

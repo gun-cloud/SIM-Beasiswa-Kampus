@@ -8,20 +8,27 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{route('beasiswa.update',$beasiswa->id)}}" method="post">
+                <form action="{{route('beasiswa.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
-                    @method('put')
                     <div class="form-group">
                         <label for="nama">Nama Beasiswa</label>
-                        <input type="text" class="form-control" id="jurusan" name="nama" value={{$beasiswa->nama}}>
+                        <input type="text" class="form-control" id="nama" name="nama">
                     </div>
                     <div class="form-group">
                         <label for="jenis">Jenis Beasiswa</label>
-                        <input type="text" class="form-control" id="jurusan" name="jenis" value={{$beasiswa->jenis}}>
+                        <input type="text" class="form-control" id="jenis" name="jenis">
                     </div>
                     <div class="form-group">
                         <label for="sumber">Sumber Dana Beasiswa</label>
-                        <input type="text" class="form-control" id="jurusan" name="sumber" value={{$beasiswa->sumber}}>
+                        <input type="text" class="form-control" id="sumber" name="sumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="gambar">Gambar</label>
+                        <input type="file" class="form-control" id="gambar" name="gambar">
                     </div>
             </div>
             <div class="modal-footer">
@@ -32,3 +39,4 @@
         </div>
     </div>
 </div>
+
