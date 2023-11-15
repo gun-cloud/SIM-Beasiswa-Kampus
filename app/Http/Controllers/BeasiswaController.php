@@ -17,7 +17,7 @@ class BeasiswaController extends Controller
     {
         return view('admin.beasiswa', [
             'title' => 'Beasiswa',
-            'beasiswas' => Beasiswa::all(),
+            'beasiswas' => Beasiswa::paginate(4),
         ]);
     }
 

@@ -17,7 +17,7 @@ class ProdiController extends Controller
     {
         return view('admin.prodi', [
             'title' => 'Prodi',
-            'prodis' => Prodi::all(),
+            'prodis' => Prodi::paginate(4),
             'jurusans' => Jurusan::all(),
         ]);
     }

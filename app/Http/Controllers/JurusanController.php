@@ -18,7 +18,7 @@ class JurusanController extends Controller
     {
         return view('admin.jurusan', [
             'title' => 'Data Jurusan',
-            'jurusans' => Jurusan::all(),
+            'jurusans' => Jurusan::paginate(4),
         ]);
     }
 

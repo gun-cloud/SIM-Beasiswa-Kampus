@@ -96,6 +96,7 @@
                     @endforelse
                 </tbody>
             </table>
+            {!! $mahasiswas->withQueryString()->links('pagination::bootstrap-5') !!}
         </div>
     </div>
 </div>

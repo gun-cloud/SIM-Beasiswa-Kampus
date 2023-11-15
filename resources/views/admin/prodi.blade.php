@@ -62,6 +62,7 @@
                     @endforelse
                 </tbody>
             </table>
+             {!! $prodis->withQueryString()->links('pagination::bootstrap-5') !!}
         </div>
     </div>
 </div>

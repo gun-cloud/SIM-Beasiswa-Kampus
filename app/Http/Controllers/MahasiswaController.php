@@ -29,7 +29,7 @@ class MahasiswaController extends Controller
             $mahasiswas->whereNull('id_beasiswa');
         }
 
-        $mahasiswas = $mahasiswas->get();
+        $mahasiswas = $mahasiswas->paginate(4);
 
         return view('admin.mahasiswa', [
             'title' => 'Mahasiswa',
