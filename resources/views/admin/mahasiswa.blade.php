@@ -62,8 +62,8 @@
                     @forelse($mahasiswas as $index => $mahasiswa)
                     <tr>
                         <td>{{$index+1}}</td>
-                        <td>{{$mahasiswa->nama}}</td>
                         <td>{{$mahasiswa->nim}}</td>
+                        <td>{{$mahasiswa->nama}}</td>
                         <td>{{$mahasiswa->prodi->jurusan->jurusan}}</td>
                         <td>{{$mahasiswa->prodi->prodi}}</td>
                         <td>{{$mahasiswa->semester}}</td>
