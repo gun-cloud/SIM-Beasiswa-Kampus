@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\Route;
 // Route::resource('/prodi', ProdiController::class);
 // Route::resource('/mahasiswa', MahasiswaController::class);
 // Route::resource('/beasiswa', BeasiswaController::class);
+
 Route::get('/', [HomeController::class, 'index']);
 
 Route::group(['middleware' => 'guest'], function () {
@@ -42,7 +43,7 @@ Route::group(['middleware' => 'guest'], function () {
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.index');
     Route::resource('/jurusan', JurusanController::class);
     Route::resource('/prodi', ProdiController::class);
     Route::resource('/mahasiswa', MahasiswaController::class);
